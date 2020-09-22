@@ -34,12 +34,23 @@ scrambledImage = scrambledImage(watermarkImage,key);
 % Chuyen 3 kenh mau cua anh thuy van sau khi bi xao tron sang binary
 [binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage] = imageToBinary(scrambledImage);
 
-% Hien thi ket qua
-subplot(1, 2, 1);
+% Hien thi ket qua (test)
+subplot(2, 2, 1);
 imshow(watermarkImage);
 title('Anh thuy van goc', 'FontSize', fontSize);
 
-subplot(1, 2, 2);
+subplot(2, 2, 2);
 imshow(scrambledImage);
 title('Anh thuy van sau khi xao tron', 'FontSize', fontSize);
+
+bi2dec=binaryToImage(binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage);
+subplot(2, 2, 3);
+imshow(bi2dec);
+title('Anh thuy van sau khi khoi phuc lai tu binary', 'FontSize', fontSize);
+
+recoverWatermarkImage = unscrambledImage(bi2dec,key);
+subplot(2, 2, 4);
+imshow(recoverWatermarkImage);
+title('Anh thuy van goc sau khi khoi phuc lai tu binary', 'FontSize', fontSize);
+
 
