@@ -1,4 +1,4 @@
-% Clear
+% Clear Workspace (phai co!!!)
 clc;
 clearvars;
 close all;
@@ -7,6 +7,7 @@ fontSize = 16;
 
 % Doc file anh
 watermarkImage = imread('.\lena.png');
+hostImage = imread('.\lena.png');
 
 % Trich xuat kenh mau.
 redChannel = watermarkImage(:,:,1); % Red channel
@@ -34,7 +35,7 @@ scrambledImage = scrambledImage(watermarkImage,key);
 % Chuyen 3 kenh mau cua anh thuy van sau khi bi xao tron sang binary
 [binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage] = imageToBinary(scrambledImage);
 
-% Hien thi ket qua (test)
+% Hien thi ket qua xao tron va chuyen sang binary anh (test 1)
 subplot(2, 2, 1);
 imshow(watermarkImage);
 title('Anh thuy van goc', 'FontSize', fontSize);
@@ -53,4 +54,27 @@ subplot(2, 2, 4);
 imshow(recoverWatermarkImage);
 title('Anh thuy van goc sau khi khoi phuc lai tu binary', 'FontSize', fontSize);
 
-
+% Hien cac block sau khi phan manh (test 2)
+% ca = cell array;
+ca=partitionImage(hostImage);
+plotIndex = 1;
+numPlotsR = size(ca, 1);
+numPlotsC = size(ca, 2);
+for r = 1 : numPlotsR
+  for c = 1 : numPlotsC
+    fprintf('plotindex = %d,   c=%d, r=%d\n', plotIndex, c, r);
+    % hien thi thu tu cac block anh
+    subplot(numPlotsR, numPlotsC, plotIndex);
+    % tao cac o de hien thi block anh
+    rgbBlock = ca{r,c};
+    imshow(rgbBlock); 
+    [rowsB columnsB numberOfColorBandsB] = size(rgbBlock);
+    % ten cac o chua block anh
+    caption = sprintf('Block #%d of %d\n%d rows by %d columns', ...
+      plotIndex, numPlotsR*numPlotsC, rowsB, columnsB);
+    title(caption);
+    drawnow;
+    % Tang chi so index len 1 
+    plotIndex = plotIndex + 1;
+  end
+end
