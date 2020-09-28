@@ -12,6 +12,10 @@ binaryRedChannelWatermarkImage = de2bi(RedChannelWatermarkImage);
 binaryGreenChannelWatermarkImage = de2bi(GreenChannelWatermarkImage);
 binaryBlueChannelWatermarkImage = de2bi(BlueChannelWatermarkImage);
 
+% chuyen thanh vecto hang
+binaryRedChannelWatermarkImage = reshape(binaryRedChannelWatermarkImage,1,[]);
+binaryGreenChannelWatermarkImage = reshape(binaryGreenChannelWatermarkImage,1,[]);
+binaryBlueChannelWatermarkImage = reshape(binaryBlueChannelWatermarkImage,1,[]);
 
 end
 
