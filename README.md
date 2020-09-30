@@ -1,12 +1,13 @@
 # Researching-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform
 
-# Information
+# Project information
 Sinh viên: Trần Hải Đăng  		
 Lớp: AT12ET  
 Người hướng dẫn: Ths. Trần Thị Xuyên  
 Đơn vị công tác: Học viện Kỹ thuật mật mã  
 Đề tài: Nghiên cứu phương pháp thủy vân mù bền vững sử dụng biến đổi Walsh Hadamard  
 
+# Sý
 # Embed Process
 ### Bước 1: Chuyển đổi ảnh thủy vân sang giá trị nhị phân sau khi đã xáo trộn dùng khóa K
 Bước 1.1: Tách ảnh thủy vân thành 3 kênh màu Red, Green, Blue.  
@@ -73,7 +74,7 @@ Bước 2: Nếu muốn thay đổi ảnh thủy vân thì thay đổi giá tr�
 Bước 1: Dùng Matlab mở file extract.m ra và chạy.  
 Bước 2: Thay đổi giá trị ở biến watermarkedImage để trích xuất thủy vân.  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg2NDUxMzAsMTI1MjQ0NzUwNSw2OT
+eyJoaXN0b3J5IjpbLTExOTU4NDQyNjYsMTI1MjQ0NzUwNSw2OT
 EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
 MjU4XX0=
 -->
