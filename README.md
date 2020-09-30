@@ -10,10 +10,11 @@ Người hướng dẫn: Ths. Trần Thị Xuyên
 # Embed Process
 ### Bước 1: Chuyển đổi ảnh thủy vân sang giá trị nhị phân sau khi đã xáo trộn dùng khóa K
 Bước 1.1: Tách ảnh thủy vân thành 3 kênh màu Red, Green, Blue.
-Bước 2.2: Ở mỗi kênh, chuyển đổi giá trị thập phân ở mỗi pixel 
+Bước 1.2: Ở mỗi kênh màu, xáo trộn các pixel ảnh dùng khóa K.
+Bước 1.3: Ở mỗi kênh, chuyển đổi giá trị thập phân ở mỗi pixel ảnh sang giá trị nhị phân.
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzkxNzcxNCwxNDA1NzM2MjU4XX0=
+eyJoaXN0b3J5IjpbLTEzMjQ5NzAzODcsMTQwNTczNjI1OF19
 -->
