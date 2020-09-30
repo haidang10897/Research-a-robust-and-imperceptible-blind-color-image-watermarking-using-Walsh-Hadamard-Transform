@@ -12,9 +12,12 @@ Người hướng dẫn: Ths. Trần Thị Xuyên
 Bước 1.1: Tách ảnh thủy vân thành 3 kênh màu Red, Green, Blue.
 Bước 1.2: Ở mỗi kênh màu, xáo trộn các pixel ảnh dùng khóa K.
 Bước 1.3: Ở mỗi kênh, chuyển đổi giá trị thập phân ở mỗi pixel ảnh sang giá trị nhị phân.
+Bước 1.4: Ở mỗi kênh, gộp dãy nhị phân thành các khối ma trận kích cỡ 1x4 để nhúng vào ảnh gốc.
+
+### Bước 2: Phân mảnh ảnh gốc thành các khối 4x4 pixel mà không bị trùng lặp
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjQ5NzAzODcsMTQwNTczNjI1OF19
+eyJoaXN0b3J5IjpbMTIwMDE4MTcwNiwxNDA1NzM2MjU4XX0=
 -->
