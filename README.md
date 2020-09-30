@@ -45,11 +45,20 @@ Bước 6.2: Tách các khối lại thành ma trận bằng hàm cell2mat
 Bước 6.3: Gộp 3 kênh màu lại.
 
 # Extract Process
-### Bước 1: 
+### Bước 1: Phân mảnh ảnh đã được thủy vân thành các khối 4x4 không trùng lặp
+Bước 1.1: Tách ảnh gốc thành 3 kênh màu Red, Green, Blue.  
+Bước 1.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x4 mà không bị trùng lặp (sẽ có những phần dư ra ở bên phải và bên dưới ảnh, nhưng ta sẽ không trích xuất ở đó).  
+
+### Bước 2: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh 
+*Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
+
+Bước 2.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.
+Bước 2.2: Dùng hàm FWHT để biến đổi các khối 4x4.  
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjQ0NzUwNSw2OTEyMTIwMTksLTIwMj
-E2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2MjU4XX0=
+eyJoaXN0b3J5IjpbMjA2ODI2ODQ4NywxMjUyNDQ3NTA1LDY5MT
+IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
+NThdfQ==
 -->
