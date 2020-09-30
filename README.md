@@ -21,7 +21,7 @@ Bước 2.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x
 ### Bước 3: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh gốc
 *Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
 
-Bước 3.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.
+Bước 3.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.  
 Bước 3.2: Dùng hàm FWHT để biến đổi các khối 4x4.  
 
 ### Bước 4: Dùng công thức để nhúng 4 bit ảnh thủy vân vào các khối ảnh gốc 4x4 đã được biến đổi Walsh Hadamard
@@ -49,16 +49,21 @@ Bước 6.3: Gộp 3 kênh màu lại.
 Bước 1.1: Tách ảnh gốc thành 3 kênh màu Red, Green, Blue.  
 Bước 1.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x4 mà không bị trùng lặp (sẽ có những phần dư ra ở bên phải và bên dưới ảnh, nhưng ta sẽ không trích xuất ở đó).  
 
-### Bước 2: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh 
+### Bước 2: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh đã được thủy vân
 *Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
 
-Bước 2.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.
+Bước 2.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.  
 Bước 2.2: Dùng hàm FWHT để biến đổi các khối 4x4.  
+
+### Bước 3: Trích xuất giá trị nhị phân của ảnh thủy vân
+*Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
+Bước 3.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.  
+Bước 3.2: Dùng công thức để trích xuất giá trị nhị phân 
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODI2ODQ4NywxMjUyNDQ3NTA1LDY5MT
-IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
-NThdfQ==
+eyJoaXN0b3J5IjpbLTE3NTE2MDk1NTEsMTI1MjQ0NzUwNSw2OT
+EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
+MjU4XX0=
 -->
