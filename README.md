@@ -8,10 +8,11 @@ Người hướng dẫn: Ths. Trần Thị Xuyên
 Đề tài: Nghiên cứu phương pháp thủy vân mù bền vững sử dụng biến đổi Walsh Hadamard  
 
 # System information
-CPU: I7-3770 3.4GHZ.  
+CPU: I7-3770 3.4GHZ  
 RAM: 16GB  
-VGA: NVIDIA GeForce 650Ti
-Software: 
+VGA: NVIDIA GeForce 650Ti  
+Software: Matlab R2018a  
+OS: Windows 10 build 19041
 # Embed Process
 ### Bước 1: Chuyển đổi ảnh thủy vân sang giá trị nhị phân sau khi đã xáo trộn dùng khóa K
 Bước 1.1: Tách ảnh thủy vân thành 3 kênh màu Red, Green, Blue.  
@@ -78,7 +79,7 @@ Bước 2: Nếu muốn thay đổi ảnh thủy vân thì thay đổi giá tr�
 Bước 1: Dùng Matlab mở file extract.m ra và chạy.  
 Bước 2: Thay đổi giá trị ở biến watermarkedImage để trích xuất thủy vân.  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMjQxMDcwOCwxMjUyNDQ3NTA1LDY5MT
-IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
-NThdfQ==
+eyJoaXN0b3J5IjpbLTEwNTMxMTM3NzYsMTI1MjQ0NzUwNSw2OT
+EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
+MjU4XX0=
 -->
