@@ -33,11 +33,13 @@ Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy v�
 **LƯU Ý:** Công thức số 19 trong bài báo bị sai, phải là a4i>a3i và a4i<=a3i.  
 **LƯU Ý 2:** Phải chọn kích cỡ ảnh thủy vân sao cho đủ dung lượng nhúng vừa với ảnh gốc, không được thừa.  Ví dụ ảnh gốc 512x512x3 thì phải chọn ảnh thủy vân 90x90x3 (Vì với kích thước vậy thì ảnh gốc sẽ chia ra được 16384 block 4x4 mỗi kênh màu và ảnh thủy vân sẽ có 16200 block 1x4 để nhúng vào, gần vừa đủ).
 
-### Bước 4: 
+### Bước 5: Tìm giá trị Floor cho mỗi khối WHT 4x4 sau khi tính ngược lại.
+Bước 5.1: Sau khi đã nhúng xong, ta đảo ngược giá trị WHT của mỗi khối 4x4 bằng hàm ifwht().
+Bước 5.2: Tìm số nguyên dương lớn nh
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMjEyMDE5LC0yMDIxNjQ0NjY2LDE3MD
-k2MTc5NDEsMTQwNTczNjI1OF19
+eyJoaXN0b3J5IjpbLTIwMTQ3NDU2NjIsNjkxMjEyMDE5LC0yMD
+IxNjQ0NjY2LDE3MDk2MTc5NDEsMTQwNTczNjI1OF19
 -->
