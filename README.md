@@ -23,14 +23,17 @@ Bước 3.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trê
 Bước 3.2: Dùng hàm FWHT để biến đổi các khối 4x4.
 
 ### Bước 4: Dùng công thức để nhúng 4 bit ảnh thủy vân vào các khối ảnh gốc 4x4 đã được biến đổi Walsh Hadamard
-Bước 3.2: Nhúng các khối ảnh thủy vân nhị phân 1x4 vào từng khối 4x4.
-Bước 3.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy vân nhị phân 1x4 vào 
+Bước 4.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.
+Bước 4.2: Nhúng các khối ảnh thủy vân nhị phân 1x4 vào từng khối 4x4 theo công thức đã có.
+Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy vân nhị phân 1x4 vào.
+**LƯU Ý:** Công thức số 19 trong bài báo bị sai, phải là a4i>a3i và a4i<=a3i.
+LƯU Ý 2: 
 
 ### Bước 4: 
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MjM0NDQxNCwtMjAyMTY0NDY2NiwxNz
-A5NjE3OTQxLDE0MDU3MzYyNThdfQ==
+eyJoaXN0b3J5IjpbMzQ0NzA4MDcsLTIwMjE2NDQ2NjYsMTcwOT
+YxNzk0MSwxNDA1NzM2MjU4XX0=
 -->
