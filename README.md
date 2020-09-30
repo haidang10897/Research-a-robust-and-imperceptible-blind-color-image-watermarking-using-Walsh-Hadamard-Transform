@@ -58,12 +58,14 @@ Bước 2.2: Dùng hàm FWHT để biến đổi các khối 4x4.
 ### Bước 3: Trích xuất giá trị nhị phân của ảnh thủy vân
 *Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
 Bước 3.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.  
-Bước 3.2: Dùng công thức để trích xuất giá trị nhị phân 
+Bước 3.2: Dùng công thức để trích xuất giá trị nhị phân của ảnh thủy vân mà ta đã nhúng lúc trước.  
+Bước 3.3: Đổi các giá trị nhị phân mà ta trích xuất được lại thành giá trị thập phân, sau đó reshape lại để cho đúng lại kích thước ảnh thủy vân (ví dụ res
+
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTE2MDk1NTEsMTI1MjQ0NzUwNSw2OT
+eyJoaXN0b3J5IjpbLTEzNjk4MzQxNzgsMTI1MjQ0NzUwNSw2OT
 EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
 MjU4XX0=
 -->
