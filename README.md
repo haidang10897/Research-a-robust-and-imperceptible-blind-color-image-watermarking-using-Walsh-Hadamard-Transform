@@ -34,16 +34,22 @@ Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy v�
 **LƯU Ý 2:** Phải chọn kích cỡ ảnh thủy vân sao cho đủ dung lượng nhúng vừa với ảnh gốc, không được thừa.  Ví dụ ảnh gốc 512x512x3 thì phải chọn ảnh thủy vân 90x90x3 (Vì với kích thước vậy thì ảnh gốc sẽ chia ra được 16384 block 4x4 mỗi kênh màu và ảnh thủy vân sẽ có 16200 block 1x4 để nhúng vào, gần vừa đủ).
 
 ### Bước 5: Tìm giá trị Floor cho mỗi khối WHT 4x4 sau khi tính ngược lại.
+*Áp dụng các bước này với các kênh màu Red, Green, Blue.*
 Bước 5.1: Sau khi đã nhúng xong, ta đảo ngược giá trị WHT của mỗi khối 4x4 bằng hàm ifwht().
 Bước 5.2: Tìm Floor cho mỗi khối 4x4 vừa nghịch đảo bằng hàm floor().
 
 ### Bước 6: Gộp lại thành ảnh đã được thủy vân
+*Áp dụng các bước này với các kênh màu Red, Green, Blue.*
 Bước 6.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.
-Bước 6.2: Tách các khối lại thành ca
+Bước 6.2: Tách các khối lại thành ma trận bằng hàm cell2mat
+Bước 6.3: Gộp 3 kênh màu lại.
+
+# Extract Process
+### Bước 1: 
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1MjI1OTUxLDY5MTIxMjAxOSwtMjAyMT
-Y0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYyNThdfQ==
+eyJoaXN0b3J5IjpbMTI1MjQ0NzUwNSw2OTEyMTIwMTksLTIwMj
+E2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2MjU4XX0=
 -->
