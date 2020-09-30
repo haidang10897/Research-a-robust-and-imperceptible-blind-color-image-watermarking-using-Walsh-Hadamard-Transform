@@ -35,11 +35,15 @@ Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy v�
 
 ### Bước 5: Tìm giá trị Floor cho mỗi khối WHT 4x4 sau khi tính ngược lại.
 Bước 5.1: Sau khi đã nhúng xong, ta đảo ngược giá trị WHT của mỗi khối 4x4 bằng hàm ifwht().
-Bước 5.2: Tìm số nguyên dương lớn nh
+Bước 5.2: Tìm Floor cho mỗi khối 4x4 vừa nghịch đảo bằng hàm floor().
+
+### Bước 6: Gộp lại thành ảnh đã được thủy vân
+Bước 6.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.
+Bước 6.2: Tách các khối lại thành ca
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTQ3NDU2NjIsNjkxMjEyMDE5LC0yMD
-IxNjQ0NjY2LDE3MDk2MTc5NDEsMTQwNTczNjI1OF19
+eyJoaXN0b3J5IjpbMzU1MjI1OTUxLDY5MTIxMjAxOSwtMjAyMT
+Y0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYyNThdfQ==
 -->
