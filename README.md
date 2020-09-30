@@ -20,7 +20,9 @@ Bước 2.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x
 
 ### Bước 3: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh gốc
 Bước 3.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.
-Bước 3.2: Dùng hàm FWHT để biến đổi các khối 4x4
+Bước 3.2: Dùng hàm FWHT để biến đổi các khối 4x4.
+
+### Bước 4: Dùng công thức để nhúng 4 bit ảnh thủy vân vào các khối ảnh gốc 4x4 đã được biến đổi Walsh Hadamard
 Bước 3.2: Nhúng các khối ảnh thủy vân nhị phân 1x4 vào từng khối 4x4.
 Bước 3.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy vân nhị phân 1x4 vào 
 
@@ -29,6 +31,6 @@ Bước 3.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy v�
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxND
-A1NzM2MjU4XX0=
+eyJoaXN0b3J5IjpbMTU3MjM0NDQxNCwtMjAyMTY0NDY2NiwxNz
+A5NjE3OTQxLDE0MDU3MzYyNThdfQ==
 -->
