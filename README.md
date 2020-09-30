@@ -66,12 +66,14 @@ Bước 3.5: Gộp 3 kênh màu RGB lại để thành ảnh thủy vân.
 
 # How to use
 ## Embed
-Bước 1: Dùng Matlab mở file  embed.m ra và chạy.
+Bước 1: Dùng Matlab mở file embed.m ra và chạy.  
 Bước 2: Nếu muốn thay đổi ảnh thủy vân thì thay đổi giá trị ở 2 biến ngay đầu là watermarkImage và hostImage.  
 
 ## Extract
+Bước 1: Dùng Matlab mở file extract.m ra và chạy.  
+Bước 2: Thay đổi giá trị ở biến watermarkedImage để trích xuất thủy vân.  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTk1NDMwNiwxMjUyNDQ3NTA1LDY5MT
-IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
-NThdfQ==
+eyJoaXN0b3J5IjpbLTE1Mzg2NDUxMzAsMTI1MjQ0NzUwNSw2OT
+EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
+MjU4XX0=
 -->
