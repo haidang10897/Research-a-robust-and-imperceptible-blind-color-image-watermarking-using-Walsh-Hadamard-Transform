@@ -31,13 +31,13 @@ Bước 4.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trê
 Bước 4.2: Nhúng các khối ảnh thủy vân nhị phân 1x4 vào từng khối 4x4 theo công thức đã có.  
 Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy vân nhị phân 1x4 vào.  
 **LƯU Ý:** Công thức số 19 trong bài báo bị sai, phải là a4i>a3i và a4i<=a3i.  
-**LƯU Ý 2:** Phải chọn kích cỡ ảnh thủy vân sao cho đủ dung lượng nhúng vừa với ảnh gốc, không được thừa.  Ví dụ ảnh gốc 512x512x3 thì phải chọn ảnh thủy vân 90x90x3 (Vì với kích thước vậy thì ảnh gốc sẽ chia ra được 16384 block 4x4 mỗi kênhvà ảnh thủy vân
+**LƯU Ý 2:** Phải chọn kích cỡ ảnh thủy vân sao cho đủ dung lượng nhúng vừa với ảnh gốc, không được thừa.  Ví dụ ảnh gốc 512x512x3 thì phải chọn ảnh thủy vân 90x90x3 (Vì với kích thước vậy thì ảnh gốc sẽ chia ra được 16384 block 4x4 mỗi kênh màu và ảnh thủy vân sẽ có 16200 block 1x4 để nhúng vào, gần vừa đủ).
 
 ### Bước 4: 
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTQyMDQ5LC0yMDIxNjQ0NjY2LDE3MD
+eyJoaXN0b3J5IjpbNjkxMjEyMDE5LC0yMDIxNjQ0NjY2LDE3MD
 k2MTc5NDEsMTQwNTczNjI1OF19
 -->
