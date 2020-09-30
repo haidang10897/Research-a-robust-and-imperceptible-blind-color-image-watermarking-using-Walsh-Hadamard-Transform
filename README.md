@@ -15,9 +15,11 @@ Bước 1.3: Ở mỗi kênh, chuyển đổi giá trị thập phân ở mỗi 
 Bước 1.4: Ở mỗi kênh, gộp dãy nhị phân thành các khối ma trận kích cỡ 1x4 để nhúng vào ảnh gốc.
 
 ### Bước 2: Phân mảnh ảnh gốc thành các khối 4x4 pixel mà không bị trùng lặp
+Bước 2.1: Tách ảnh gốc thành 3 kênh màu Red, Green, Blue.
+Bước 2.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x4 mà không bị trùng lặp (sẽ có những phần dư ra ở bên phải và bên dưới ảnh, nhưng ta sẽ không nhúng vào đó).
 # How to use
 WIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDE4MTcwNiwxNDA1NzM2MjU4XX0=
+eyJoaXN0b3J5IjpbLTEwMDI4MDMzODIsMTQwNTczNjI1OF19
 -->
