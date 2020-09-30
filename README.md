@@ -59,13 +59,16 @@ Bước 2.2: Dùng hàm FWHT để biến đổi các khối 4x4.
 *Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
 Bước 3.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.  
 Bước 3.2: Dùng công thức để trích xuất giá trị nhị phân của ảnh thủy vân mà ta đã nhúng lúc trước.  
-Bước 3.3: Đổi các giá trị nhị phân mà ta trích xuất được lại thành giá trị thập phân, sau đó reshape lại để cho đúng lại kích thước ảnh thủy vân (ví dụ res
+Bước 3.3: Đổi các giá trị nhị phân mà ta trích xuất được lại thành giá trị thập phân, sau đó reshape lại để cho đúng lại kích thước ảnh thủy vân (ví dụ reshape lại thành ma trận 90x90).  
+Bước 3.4: Dùng khóa K lúc đầu để sắp xếp lại các giá trị pixel đã bị xáo trộn.  
+Bước 3.5: Gộp 3 kênh màu RGB lại để thành ảnh thủy vân.
+
 
 # How to use
-WIP
-
+## Embed
+Bước 1: Dùng Matlab mo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjk4MzQxNzgsMTI1MjQ0NzUwNSw2OT
-EyMTIwMTksLTIwMjE2NDQ2NjYsMTcwOTYxNzk0MSwxNDA1NzM2
-MjU4XX0=
+eyJoaXN0b3J5IjpbLTgyOTY4NjYyOCwxMjUyNDQ3NTA1LDY5MT
+IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
+NThdfQ==
 -->
