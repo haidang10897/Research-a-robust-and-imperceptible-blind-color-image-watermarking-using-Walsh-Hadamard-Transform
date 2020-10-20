@@ -1,16 +1,9 @@
-% Clear Workspace (phai co!!!)
-clc;
-clearvars;
-close all;
-workspace;
-fontSize = 16;
-
+function watermarkImage = extract(watermarkedImagePath, keyPath)
 % Doc file anh
-watermarkedImage = imread('.\lena_watermarked.png');
-%watermarkedImage = imnoise(watermarkedImage,'gaussian')
+watermarkedImage = imread(watermarkedImagePath);
 
 % load key
-key = load('.\MyMatrix.txt');
+key = load(keyPath);
 
 % set che do full screen (dung de phong to ket qua cho de nhin)
 set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
@@ -19,6 +12,7 @@ set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
 watermarkedImageRedChannel = watermarkedImage(:,:,1); % Red channel
 watermarkedImageGreenChannel = watermarkedImage(:,:,2); % Green channel
 watermarkedImageBlueChannel = watermarkedImage(:,:,3); % Blue channel
+
 
 % partition watermarked image
 partitionWatermarkedImageRedChannel = partitionImage(watermarkedImageRedChannel);
@@ -119,5 +113,5 @@ extractedWatermarkedBinaryBlueBinary = uint8(extractedWatermarkedBinaryBlueBinar
 
 scrambledWatermarkImage = binaryToImage(extractedWatermarkedBinaryRedBinary, extractedWatermarkedBinaryGreenBinary, extractedWatermarkedBinaryBlueBinary,90,90);
 watermarkImage = unscrambledImage(scrambledWatermarkImage, key);
-imshow(watermarkImage);
 
+end

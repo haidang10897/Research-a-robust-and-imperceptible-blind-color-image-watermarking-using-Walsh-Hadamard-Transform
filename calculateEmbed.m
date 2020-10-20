@@ -1,8 +1,8 @@
 function embeddedWhtPartitionHostImage = calculateEmbed(whtPartitionHostImage,binaryBlock)
 %UNTITLED4 Summary of this function goes here
 %   Detailed explanation goes here
-d = abs(ceil(whtPartitionHostImage(3,:))-ceil(whtPartitionHostImage(4,:)));
-avg = (ceil(whtPartitionHostImage(3,:))+ceil(whtPartitionHostImage(4,:)))/2;
+d = abs(floor(whtPartitionHostImage(3,:))-floor(whtPartitionHostImage(4,:)));
+avg = (floor(whtPartitionHostImage(3,:))+floor(whtPartitionHostImage(4,:)))/2;
 
 for i=1:4
    

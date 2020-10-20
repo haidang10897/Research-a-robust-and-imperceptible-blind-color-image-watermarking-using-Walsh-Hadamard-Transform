@@ -1,13 +1,8 @@
-% Clear Workspace (phai co!!!)
-clc;
-clearvars;
-close all;
-workspace;
-fontSize = 16;
+function watermarkedImage = Embed(watermarkImagePath, hostImagePath, keyPath)
 
 % Doc file anh
-watermarkImage = imread('.\android.png');
-hostImage = imread('.\lena.png');
+watermarkImage = imread(watermarkImagePath);
+hostImage = imread(hostImagePath);
 
 % Trich xuat kenh mau.
 watermarkImageRedChannel = watermarkImage(:,:,1); % Red channel
@@ -25,70 +20,24 @@ hostImageBlueChannel = hostImage(:,:,3); % Blue channel
 [watermarkImageRows, watermarkImageColumns, watermarkImageNumberOfColorBands] = size(watermarkImage);
 
 % Tao key bang cach random vi tri xao tron (dung ham randperm)
-key = load('.\MyMatrix.txt');
+
+key = load(keyPath);
 
 %key = randperm(watermarkImageRows*watermarkImageColumns);
 %save('MyMatrix.txt', 'key', '-ascii', '-tabs')
 
 % set che do full screen (dung de phong to ket qua cho de nhin)
-set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
+% set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
 
 % Dung ham tu tao scrambledImage de xao tron anh thuy van 
-scrambledImage = scrambledImage(watermarkImage,key);
+ScrambledImage = scrambledImage(watermarkImage,key);
 
 % Chuyen 3 kenh mau cua anh thuy van sau khi bi xao tron sang binary
-[binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage] = imageToBinary(scrambledImage);
+[binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage] = imageToBinary(ScrambledImage);
 
 % Chuyen binary moi kenh sang cac ma tran 1x4
 %blockBinaryRedChannelWatermarkImage = mat2cell(binaryRedChannelWatermarkImage, 1, 4);
-% Hien thi ket qua xao tron va chuyen sang binary anh (test 1)
 
-
-subplot(2, 2, 1);
-imshow(watermarkImage);
-title('Anh thuy van goc', 'FontSize', fontSize);
-
-subplot(2, 2, 2);
-imshow(scrambledImage);
-title('Anh thuy van sau khi xao tron', 'FontSize', fontSize);
-
-bi2dec=binaryToImage(binaryRedChannelWatermarkImage, binaryGreenChannelWatermarkImage, binaryBlueChannelWatermarkImage, watermarkImageRows, watermarkImageColumns);
-subplot(2, 2, 3);
-imshow(bi2dec);
-title('Anh thuy van sau khi khoi phuc lai tu binary', 'FontSize', fontSize);
-
-recoverWatermarkImage = unscrambledImage(bi2dec,key);
-subplot(2, 2, 4);
-imshow(recoverWatermarkImage);
-title('Anh thuy van goc sau khi khoi phuc lai tu scamble', 'FontSize', fontSize);
-
-
-% Hien cac block sau khi phan manh (test 2)
-% ca = cell array;
-%{
-ca=partitionImage(hostImageRedChannel);
-plotIndex = 1;
-numPlotsR = size(ca, 1);
-numPlotsC = size(ca, 2);
-for r = 1 : numPlotsR
-  for c = 1 : numPlotsC
-    fprintf('plotindex = %d,   c=%d, r=%d\n', plotIndex, c, r);
-    % hien thi thu tu cac block anh
-    subplot(numPlotsR, numPlotsC, plotIndex);
-    % tao cac o de hien thi block anh
-    rgbBlock = ca{r,c};
-    imshow(rgbBlock); 
-    [rowsB columnsB numberOfColorBandsB] = size(rgbBlock);
-    % ten cac o chua block anh
-    caption = sprintf('Block #%d of %d\n%d rows by %d columns', ...
-      plotIndex, numPlotsR*numPlotsC, rowsB, columnsB);
-    title(caption);
-    drawnow;
-    % Tang chi so index len 1 
-    plotIndex = plotIndex + 1;
-  end
-end
-%}
 
 % Buoc 2: Phan manh hostImage thanh cac khoi 4x4 khong bi trung lap
 % Phan manh cac kenh mau cua hostImage
@@ -220,21 +169,7 @@ watermarkedhostImageBlueChannel = uint8(watermarkedhostImageBlueChannel);
 
 % Combine lai
 watermarkedImage = cat(3, watermarkedhostImageRedChannel,watermarkedhostImageGreenChannel, watermarkedhostImageBlueChannel);
-imwrite(watermarkedImage,'lena_watermarked.png');
 
-subplot(2, 2, 1);
-imshow(hostImage);
-title('Anh goc', 'FontSize', fontSize);
 
-subplot(2, 2, 2);
-imshow(watermarkedImage);
-title('Anh da thuy van', 'FontSize', fontSize);
-
-subplot(2, 2, 3);
-histogram(hostImage)
-title('Anh goc', 'FontSize', fontSize);
-
-subplot(2, 2, 4);
-histogram(watermarkedImage)
-title('Anh tv', 'FontSize', fontSize);
+end
 

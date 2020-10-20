@@ -4,7 +4,7 @@ function extractedWatermarkedBinaryBlock = calculateExtract(partitionWatermarked
 
 
 d = abs(partitionWatermarkedImageChannel(3,:)-partitionWatermarkedImageChannel(4,:));
-b = rem(ceil(d),2);
+b = rem(floor(d),2);
 
 extractedWatermarkedBinaryBlock = b;
 end
