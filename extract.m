@@ -6,7 +6,7 @@ watermarkedImage = imread(watermarkedImagePath);
 key = load(keyPath);
 
 % set che do full screen (dung de phong to ket qua cho de nhin)
-set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
+%set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
 
 % extract kenh mau
 watermarkedImageRedChannel = watermarkedImage(:,:,1); % Red channel
@@ -58,11 +58,11 @@ for r = 1 : redNumPlotsR-1
       
     extractedWatermarkedBinaryRedBlock{binaryBlockIndex} = calculateExtract(whtPartitionWatermarkedImageRedChannel{r,c});
     binaryBlockIndex = binaryBlockIndex + 1;
-      if binaryBlockIndex > 16200
+      if binaryBlockIndex > (size(key,2)*8/4)
             break
       end
   end
-  if binaryBlockIndex > 16200
+  if binaryBlockIndex > (size(key,2)*8/4)
             break
       end
 end
@@ -75,11 +75,11 @@ for r = 1 : greenNumPlotsR-1
       
     extractedWatermarkedBinaryGreenBlock{binaryBlockIndex} = calculateExtract(whtPartitionWatermarkedImageGreenChannel{r,c});
     binaryBlockIndex = binaryBlockIndex + 1;
-      if binaryBlockIndex > 16200
+      if binaryBlockIndex > (size(key,2)*8/4)
             break
       end
   end
-      if binaryBlockIndex > 16200
+      if binaryBlockIndex > (size(key,2)*8/4)
             break
       end
 end
@@ -92,12 +92,12 @@ for r = 1 : blueNumPlotsR-1
     
     extractedWatermarkedBinaryBlueBlock{binaryBlockIndex} = calculateExtract(whtPartitionWatermarkedImageBlueChannel{r,c});
     binaryBlockIndex = binaryBlockIndex + 1;
-        if binaryBlockIndex > 16200
+        if binaryBlockIndex > (size(key,2)*8/4)
             break
         end
       
   end
-    if binaryBlockIndex > 16200
+    if binaryBlockIndex > (size(key,2)*8/4)
             break
       end
 end
