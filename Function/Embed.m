@@ -59,7 +59,7 @@ RednumPlotsR = size(partitionHostImageRedChannel, 1); % Lay size cua row
 RednumPlotsC = size(partitionHostImageRedChannel, 2); % Lay size cua column
 for r = 1 : RednumPlotsR-1
   for c = 1 : RednumPlotsC-1
-    whtPartitionHostImageRedChannel{r,c} = fwht(double(partitionHostImageRedChannel{r,c}),4,'hadamard');
+    partitionHostImageRedChannel{r,c} = fwht(double(partitionHostImageRedChannel{r,c}),4,'hadamard');
   end
 end
 
@@ -68,7 +68,7 @@ GreennumPlotsR = size(partitionHostImageGreenChannel, 1); % Lay size cua row
 GreennumPlotsC = size(partitionHostImageGreenChannel, 2); % Lay size cua column
 for r = 1 : GreennumPlotsR-1
   for c = 1 : GreennumPlotsC-1
-    whtPartitionHostImageGreenChannel{r,c} = fwht(double(partitionHostImageGreenChannel{r,c}),4,'hadamard');
+    partitionHostImageGreenChannel{r,c} = fwht(double(partitionHostImageGreenChannel{r,c}),4,'hadamard');
   end
 end
 
@@ -77,7 +77,7 @@ BluenumPlotsR = size(partitionHostImageBlueChannel, 1); % Lay size cua row
 BluenumPlotsC = size(partitionHostImageBlueChannel, 2); % Lay size cua column
 for r = 1 : BluenumPlotsR-1
   for c = 1 : BluenumPlotsC-1
-    whtPartitionHostImageBlueChannel{r,c} = fwht(double(partitionHostImageBlueChannel{r,c}),4,'hadamard');
+    partitionHostImageBlueChannel{r,c} = fwht(double(partitionHostImageBlueChannel{r,c}),4,'hadamard');
   end
 end
 
@@ -92,7 +92,7 @@ binaryBlueChannelWatermarkImageBlock = partitionBinary(binaryBlueChannelWatermar
 binaryBlockIndex=1; % Count var
 for r = 1 : RednumPlotsR-1 % bien dem block (phai tru 1 vi o cuoi cung khong co ma tran)
     for c = 1 : RednumPlotsC-1 % same as above
-        whtPartitionHostImageRedChannel{r,c} = calculateEmbed(whtPartitionHostImageRedChannel{r,c},binaryRedChannelWatermarkImageBlock{binaryBlockIndex});
+        partitionHostImageRedChannel{r,c} = calculateEmbed(partitionHostImageRedChannel{r,c},binaryRedChannelWatermarkImageBlock{binaryBlockIndex});
         binaryBlockIndex = binaryBlockIndex + 1;
         if binaryBlockIndex > size(binaryRedChannelWatermarkImageBlock, 2)
             break
@@ -107,7 +107,7 @@ end
 binaryBlockIndex=1;
 for r = 1 : GreennumPlotsR-1 % bien dem block (phai tru 1 vi o cuoi cung khong co ma tran)
     for c = 1 : GreennumPlotsC-1 % same as above
-        whtPartitionHostImageGreenChannel{r,c} = calculateEmbed(whtPartitionHostImageGreenChannel{r,c},binaryGreenChannelWatermarkImageBlock{binaryBlockIndex});
+        partitionHostImageGreenChannel{r,c} = calculateEmbed(partitionHostImageGreenChannel{r,c},binaryGreenChannelWatermarkImageBlock{binaryBlockIndex});
         binaryBlockIndex= binaryBlockIndex + 1;
         if binaryBlockIndex > size(binaryGreenChannelWatermarkImageBlock, 2)
             break
@@ -122,7 +122,7 @@ end
 binaryBlockIndex=1;
 for r = 1 : BluenumPlotsR-1 % bien dem block (phai tru 1 vi o cuoi cung khong co ma tran)
     for c = 1 : BluenumPlotsC-1 % same as above
-        whtPartitionHostImageBlueChannel{r,c} = calculateEmbed(whtPartitionHostImageBlueChannel{r,c},binaryBlueChannelWatermarkImageBlock{binaryBlockIndex});
+        partitionHostImageBlueChannel{r,c} = calculateEmbed(partitionHostImageBlueChannel{r,c},binaryBlueChannelWatermarkImageBlock{binaryBlockIndex});
         binaryBlockIndex= binaryBlockIndex + 1;
         if binaryBlockIndex > size(binaryBlueChannelWatermarkImageBlock, 2)
             break
@@ -137,29 +137,67 @@ end
 % Inverse kenh Red
 for r = 1 : RednumPlotsR-1
   for c = 1 : RednumPlotsC-1
-    inversePartitionHostImageRedChannel{r,c} = floor(ifwht(double(whtPartitionHostImageRedChannel{r,c}),4,'hadamard'));
+    partitionHostImageRedChannel{r,c} = floor(ifwht(double(partitionHostImageRedChannel{r,c}),4,'hadamard'));
   end
 end
 
 % Inverse kenh Green
 for r = 1 : GreennumPlotsR-1
   for c = 1 : GreennumPlotsC-1
-    inversePartitionHostImageGreenChannel{r,c} = floor(ifwht(double(whtPartitionHostImageGreenChannel{r,c}),4,'hadamard'));
+    partitionHostImageGreenChannel{r,c} = floor(ifwht(double(partitionHostImageGreenChannel{r,c}),4,'hadamard'));
   end
 end
 
 % Inverse kenh Blue
 for r = 1 : BluenumPlotsR-1
   for c = 1 : BluenumPlotsC-1
-    inversePartitionHostImageBlueChannel{r,c} = floor(ifwht(double(whtPartitionHostImageBlueChannel{r,c}),4,'hadamard'));
+    partitionHostImageBlueChannel{r,c} = floor(ifwht(double(partitionHostImageBlueChannel{r,c}),4,'hadamard'));
   end
+end
+
+% Gop lai anh thuy van bi phan manh o 2 ria phai va duoi, sau do chuyen
+% sang kieu double
+% chuyen ve double
+for c = 1 : RednumPlotsC
+    
+    partitionHostImageRedChannel{RednumPlotsR,c} = double(partitionHostImageRedChannel{RednumPlotsR,c});
+    
+end
+
+for r = 1 : RednumPlotsR
+    
+    partitionHostImageRedChannel{r,RednumPlotsC} = double(partitionHostImageRedChannel{r,RednumPlotsC});
+end
+% Ghep kenh G
+
+for c = 1 : GreennumPlotsC
+    
+    partitionHostImageGreenChannel{GreennumPlotsR,c} = double(partitionHostImageGreenChannel{GreennumPlotsR,c});
+    
+end
+
+for r = 1 : GreennumPlotsR
+    
+    partitionHostImageGreenChannel{r,GreennumPlotsC} = double(partitionHostImageGreenChannel{r,GreennumPlotsC});
+end
+% Ghep kenh B
+
+for c = 1 : BluenumPlotsC
+    
+    partitionHostImageBlueChannel{BluenumPlotsR,c} = double(partitionHostImageBlueChannel{BluenumPlotsR,c});
+    
+end
+
+for r = 1 : BluenumPlotsR
+    
+    partitionHostImageBlueChannel{r,BluenumPlotsC} = double(partitionHostImageBlueChannel{r,BluenumPlotsC});
 end
 
 % Buoc 8: gop lai thanh anh da thuy van
 % Doi nguoc lai tu cell thanh matrix
-watermarkedhostImageRedChannel = cell2mat(inversePartitionHostImageRedChannel);
-watermarkedhostImageGreenChannel = cell2mat(inversePartitionHostImageGreenChannel);
-watermarkedhostImageBlueChannel = cell2mat(inversePartitionHostImageBlueChannel);
+watermarkedhostImageRedChannel = cell2mat(partitionHostImageRedChannel);
+watermarkedhostImageGreenChannel = cell2mat(partitionHostImageGreenChannel);
+watermarkedhostImageBlueChannel = cell2mat(partitionHostImageBlueChannel);
 
 % chuyen kieu ve uint8 (bat buoc de imshow doc duoc anh, de double thi chi
 % doc duoc 0 va 1 tuc trang va den)

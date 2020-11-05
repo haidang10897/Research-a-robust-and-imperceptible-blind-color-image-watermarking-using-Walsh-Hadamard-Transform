@@ -21,7 +21,8 @@ function [PSNR,wPSNR] = wpsnr(a,b)
 wPSNR=[];
 
 if (a==b)
-    out=inf; % if 2 images are same so the result is infinitive
+    PSNR=inf; % if 2 images are same so the result is infinitive
+    wPSNR=inf;
 else
     % Get matrices of color image
     if size(a,3)==3
