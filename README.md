@@ -9,7 +9,7 @@ Project: Research a robust and imperceptible blind color image watermarking usin
 Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
 
 # Overview
-<img src = "../Image/Home.png">  
+<img src = "./Image/Home.png">  
 
 # System information
 
@@ -51,23 +51,23 @@ Display: Asus VA24EHE
 # Embed Result
 | Host image | Watermark image |
 |--|--|
-| <img src = "../Test%20sample/Non-square%20Host%20Image/shima.png">   | <img src = "../Test%20sample/Watermark/Shimakaze.png"> |  
+| <img src = "./Test%20sample/Non-square%20Host%20Image/shima.png">   | <img src = "./Test%20sample/Watermark/Shimakaze.png"> |  
 
 | Embedded host image | Extracted watermark image |
 |--|--|
-| <img src = "../Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "../Test%20sample/Processed%20Image/Watermarked/Extracted_Watermark_Shima_Shimakaze.png"> |
+| <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/Watermarked/Extracted_Watermark_Shima_Shimakaze.png"> |
 
 # Attack Result
 | Attack | Extracted Watermark |
 |--|--|
-| Rotate | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/rotate.png"> |
-| Resize | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/resize.png"> |
-| Crop Vertically | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/crop.png"> |
-| Salt and Pepper | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/salt%20and%20pepper.png"> |
-| Median filter | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/medfil.png"> |
-| Brighten | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/brighten.png"> |
-| Darken | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/darken.png"> |
-| Compress | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/compress.png"> |
+| Rotate | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/rotate.png"> |
+| Resize | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/resize.png"> |
+| Crop Vertically | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/crop.png"> |
+| Salt and Pepper | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/salt%20and%20pepper.png"> |
+| Median filter | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/medfil.png"> |
+| Brighten | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/brighten.png"> |
+| Darken | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/darken.png"> |
+| Compress | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/compress.png"> |
 
 # Note
 - Make sure to read the guide before using.
