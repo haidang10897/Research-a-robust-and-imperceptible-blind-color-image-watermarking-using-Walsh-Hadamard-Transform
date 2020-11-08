@@ -55,7 +55,7 @@ Display: Asus VA24EHE
 
 | Embedded host image | Extracted watermark image |
 |--|--|
-| <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/Watermarked/Extracted_Watermark_Shima_Shimakaze.png"> |
+| <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/extracted_watermark/Extracted_Watermark_Shima_Shimakaze.png"> |
 
 # Attack Result
 | Attack | Extracted Watermark |
