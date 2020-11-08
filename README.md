@@ -1,11 +1,15 @@
-# Researching-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform
+# Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform
 
 # Project information
-Sinh viên: Trần Hải Đăng  		
-Lớp: AT12ET  
-Người hướng dẫn: Ths. Trần Thị Xuyên  
-Đơn vị công tác: Học viện Kỹ thuật mật mã  
-Đề tài: Nghiên cứu phương pháp thủy vân mù bền vững sử dụng biến đổi Walsh Hadamard  
+Scholar: Trần Hải Đăng  		
+Class: AT12ET - AT120515  
+Instructor: Ths. Trần Thị Xuyên  
+Academy: Academy of Cryptography Techniques  
+Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
+Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
+
+# Overview
+<img src = "../Image/Home.png">  
 
 # System information
 
@@ -16,73 +20,57 @@ Software: Matlab R2018a
 OS: Windows 10 build 19041
 Display: Asus VA24EHE
 
-# Embed Process
-### Bước 1: Chuyển đổi ảnh thủy vân sang giá trị nhị phân sau khi đã xáo trộn dùng khóa K
-Bước 1.1: Tách ảnh thủy vân thành 3 kênh màu Red, Green, Blue.  
-Bước 1.2: Ở mỗi kênh màu, xáo trộn các pixel ảnh dùng khóa K.  
-Bước 1.3: Ở mỗi kênh, chuyển đổi giá trị thập phân ở mỗi pixel ảnh sang giá trị nhị phân.  
-Bước 1.4: Ở mỗi kênh, gộp dãy nhị phân thành các khối ma trận kích cỡ 1x4 để nhúng vào ảnh gốc.  
+# How to install
+### For MATLAB user
 
-### Bước 2: Phân mảnh ảnh gốc thành các khối 4x4 pixel mà không bị trùng lặp
-Bước 2.1: Tách ảnh gốc thành 3 kênh màu Red, Green, Blue.  
-Bước 2.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x4 mà không bị trùng lặp (sẽ có những phần dư ra ở bên phải và bên dưới ảnh, nhưng ta sẽ không nhúng vào đó).  
+    1. Download "WatermarkWHT_for_MATLAB_user" lastest version.
+    2. Open "MATLAB" program.
+    3. Change Workspace/Current folder to where you save the downloaded file above.
+    4. Right-click to the ~.mlappinstall file to install.
+    5. On top of the MATLAB menu, change to tab "Apps" and choose the program you've just installed.  
 
-### Bước 3: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh gốc
-*Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
+### For non-MATLAB user
 
-Bước 3.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.  
-Bước 3.2: Dùng hàm FWHT để biến đổi các khối 4x4.  
+    1. Download "WatermarkWHT" lastest version.
+    2. Open the install file to install the program.
+    3. Follow the instruction in the setup file.
+    4. When done, open the program and begin to use.
 
-### Bước 4: Dùng công thức để nhúng 4 bit ảnh thủy vân vào các khối ảnh gốc 4x4 đã được biến đổi Walsh Hadamard
-*Áp dụng các bước này với các kênh màu Red, Green, Blue. Ảnh thủy vân kênh Red thì nhúng vào ảnh gốc kênh Red, Green vào Green, Blue vào Blue.*  
+### For Developer
 
-Bước 4.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.  
-Bước 4.2: Nhúng các khối ảnh thủy vân nhị phân 1x4 vào từng khối 4x4 theo công thức đã có.  
-Bước 4.3: Lặp lại cho đến khi nhúng hết các khối ảnh thủy vân nhị phân 1x4 vào.  
-**LƯU Ý:** Công thức số 19 trong bài báo bị sai, phải là a4i>a3i và a4i<=a3i.  
-**LƯU Ý 2:** Phải chọn kích cỡ ảnh thủy vân sao cho đủ dung lượng nhúng vừa với ảnh gốc, không được thừa.  Ví dụ ảnh gốc 512x512x3 thì phải chọn ảnh thủy vân 90x90x3 (Vì với kích thước vậy thì ảnh gốc sẽ chia ra được 16384 block 4x4 mỗi kênh màu và ảnh thủy vân sẽ có 16200 block 1x4 để nhúng vào, gần vừa đủ).
-
-### Bước 5: Tìm giá trị Floor cho mỗi khối WHT 4x4 sau khi tính ngược lại.
-*Áp dụng các bước này với các kênh màu Red, Green, Blue.*
-Bước 5.1: Sau khi đã nhúng xong, ta đảo ngược giá trị WHT của mỗi khối 4x4 bằng hàm ifwht().
-Bước 5.2: Tìm Floor cho mỗi khối 4x4 vừa nghịch đảo bằng hàm floor().
-
-### Bước 6: Gộp lại thành ảnh đã được thủy vân
-*Áp dụng các bước này với các kênh màu Red, Green, Blue.*
-Bước 6.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.
-Bước 6.2: Tách các khối lại thành ma trận bằng hàm cell2mat
-Bước 6.3: Gộp 3 kênh màu lại.
-
-# Extract Process
-### Bước 1: Phân mảnh ảnh đã được thủy vân thành các khối 4x4 không trùng lặp
-Bước 1.1: Tách ảnh gốc thành 3 kênh màu Red, Green, Blue.  
-Bước 1.2: Ở mỗi kênh, chia ma trận thành các khối ma trận con 4x4 mà không bị trùng lặp (sẽ có những phần dư ra ở bên phải và bên dưới ảnh, nhưng ta sẽ không trích xuất ở đó).  
-
-### Bước 2: Áp dụng biến đổi Walsh Hadamard cho mỗi khối ảnh 4x4 của ảnh đã được thủy vân
-*Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
-
-Bước 2.1: Duyệt các khối ma trận 4x4 từ trái sang phải, từ trên xuống dưới.  
-Bước 2.2: Dùng hàm FWHT để biến đổi các khối 4x4.  
-
-### Bước 3: Trích xuất giá trị nhị phân của ảnh thủy vân
-*Áp dụng các bước này với các kênh màu Red, Green, Blue.*  
-Bước 3.1: Duyệt từ trái sang phải, từ trên xuống dưới các khối 4x4.  
-Bước 3.2: Dùng công thức để trích xuất giá trị nhị phân của ảnh thủy vân mà ta đã nhúng lúc trước.  
-Bước 3.3: Đổi các giá trị nhị phân mà ta trích xuất được lại thành giá trị thập phân, sau đó reshape lại để cho đúng lại kích thước ảnh thủy vân (ví dụ reshape lại thành ma trận 90x90).  
-Bước 3.4: Dùng khóa K lúc đầu để sắp xếp lại các giá trị pixel đã bị xáo trộn.  
-Bước 3.5: Gộp 3 kênh màu RGB lại để thành ảnh thủy vân.
-
+    1. Clone or Fork,... the repository (E.g: Click Code -> Download ZIP on above menu of this web)
+    2. Open "MATLAB" program.
+    3. Change Workspace or add to path the folder you've just downloaded.
+    4. Begin edit.
 
 # How to use
-## Embed
-Bước 1: Dùng Matlab mở file embed.m ra và chạy.  
-Bước 2: Nếu muốn thay đổi ảnh thủy vân thì thay đổi giá trị ở 2 biến ngay đầu là watermarkImage và hostImage.  
+> The program have GUI so it's very easy to use, if you still not know how to use, so go to the tab "About" in the program you've opened and read the guide. Beside, there are videos below the guide to help you (but require internet). - BacDau
 
-## Extract
-Bước 1: Dùng Matlab mở file extract.m ra và chạy.  
-Bước 2: Thay đổi giá trị ở biến watermarkedImage để trích xuất thủy vân.  
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwODI4MjcxNiwxMjUyNDQ3NTA1LDY5MT
-IxMjAxOSwtMjAyMTY0NDY2NiwxNzA5NjE3OTQxLDE0MDU3MzYy
-NThdfQ==
--->
+> Tutorial videos: https://www.youtube.com/playlist?list=PL5D4ygJQLkjgtDO9FgI8tZhbU6i3DRSIl  
+
+# Embed Result
+| Host image | Watermark image |
+|--|--|
+| <img src = "../Test%20sample/Non-square%20Host%20Image/shima.png">   | <img src = "../Test%20sample/Watermark/Shimakaze.png"> |  
+
+| Embedded host image | Extracted watermark image |
+|--|--|
+| <img src = "../Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "../Test%20sample/Processed%20Image/Watermarked/Extracted_Watermark_Shima_Shimakaze.png"> |
+
+# Attack Result
+| Attack | Extracted Watermark |
+|--|--|
+| Rotate | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/rotate.png"> |
+| Resize | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/resize.png"> |
+| Crop Vertically | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/crop.png"> |
+| Salt and Pepper | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/salt%20and%20pepper.png"> |
+| Median filter | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/medfil.png"> |
+| Brighten | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/brighten.png"> |
+| Darken | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/darken.png"> |
+| Compress | <img src = "../Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/compress.png"> |
+
+# Note
+- Make sure to read the guide before using.
+- If you're a developer, or just want to edit code, make sure you have MATLAB R2018 or newer, because "App designer" only have in that MATLAB version.
+
+
