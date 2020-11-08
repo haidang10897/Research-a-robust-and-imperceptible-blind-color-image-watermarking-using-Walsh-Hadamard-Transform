@@ -1,5 +1,15 @@
-# Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform
+# Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform
+# Table of contents
+* [1. Project Information](#1)
+* [2. Overview](#2)
+* [3. System information](#3)
+* [4. How to use](#4)
+* [5. How to install](#5)  
+* [6. Embed Result](#6)  
+* [7. Attack Result](#7)  
+* [8. Note](#8)  
 
+<a name="1"></a>
 # Project information
 Scholar: Trần Hải Đăng  		
 Class: AT12ET - AT120515  
@@ -8,9 +18,11 @@ Academy: Academy of Cryptography Techniques
 Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
 Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
 
+<a name="2"></a>
 # Overview
 <img src = "./Image/Home.png">  
 
+<a name="3"></a>
 # System information
 
 CPU: Intel Core I7-3770 3.4GHZ  
@@ -20,6 +32,7 @@ Software: Matlab R2018a
 OS: Windows 10 build 19041
 Display: Asus VA24EHE
 
+<a name="4"></a>
 # How to install
 ### For MATLAB user
 
@@ -43,11 +56,13 @@ Display: Asus VA24EHE
     3. Change Workspace or add to path the folder you've just downloaded.
     4. Begin edit.
 
+<a name="5"></a>
 # How to use
 > The program have GUI so it's very easy to use, if you still not know how to use, so go to the tab "About" in the program you've opened and read the guide. Beside, there are videos below the guide to help you (but require internet). - BacDau
 
 > Tutorial videos: https://www.youtube.com/playlist?list=PL5D4ygJQLkjgtDO9FgI8tZhbU6i3DRSIl  
 
+<a name="6"></a>
 # Embed Result
 | Host image | Watermark image |
 |--|--|
@@ -57,6 +72,7 @@ Display: Asus VA24EHE
 |--|--|
 | <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/extracted_watermark/Extracted_Watermark_Shima_Shimakaze.png"> |
 
+<a name="7"></a>
 # Attack Result
 | Attack | Extracted Watermark |
 |--|--|
@@ -69,6 +85,7 @@ Display: Asus VA24EHE
 | Darken | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/darken.png"> |
 | Compress | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/compress.png"> |
 
+<a name="8"></a>
 # Note
 - Make sure to read the guide before using.
 - If you're a developer, or just want to edit code, make sure you have MATLAB R2018 or newer, because "App designer" only have in that MATLAB version.
