@@ -37,7 +37,7 @@ CPU: Intel Core I7-3770 3.4GHZ
 RAM: 16GB  
 VGA: NVIDIA GeForce 650Ti  
 Software: Matlab R2018a  
-OS: Windows 10 build 19041
+OS: Windows 10 build 19041  
 Display: Asus VA24EHE
 
 <a name="4"></a>
