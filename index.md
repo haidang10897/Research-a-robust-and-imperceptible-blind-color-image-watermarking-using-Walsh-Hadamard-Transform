@@ -11,9 +11,9 @@
 
 <a name="1"></a>
 # Project information
-Scholar: Tran Hai Dang    		
-Class: AT12ET - AT120515    
-Instructor: Ths. Tran Thi Xuyen  
+Scholar: Trần Hải Đăng  
+Class: AT12ET - AT120515  
+Instructor: Ths. Trần Thị Xuyên  
 Academy: Academy of Cryptography Techniques  
 Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
 Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
@@ -66,7 +66,8 @@ Display: Asus VA24EHE
 > Tutorial videos: https://www.youtube.com/playlist?list=PL5D4ygJQLkjgtDO9FgI8tZhbU6i3DRSIl  
 
 <a name="6"></a>
-# Embed Result
+# Embed Result  
+
 | Host image | Watermark image |
 |--|--|
 | <img src = "./Test%20sample/Non-square%20Host%20Image/shima.png">   | <img src = "./Test%20sample/Watermark/Shimakaze.png"> |  
@@ -76,7 +77,8 @@ Display: Asus VA24EHE
 | <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/extracted_watermark/Extracted_Watermark_Shima_Shimakaze.png"> |
 
 <a name="7"></a>
-# Attack Result
+# Attack Result  
+
 | Attack | Extracted Watermark |
 |--|--|
 | Rotate | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/rotate.png"> |
@@ -92,5 +94,4 @@ Display: Asus VA24EHE
 # Note
 - Make sure to read the guide before using.
 - If you're a developer, or just want to edit code, make sure you have MATLAB R2018 or newer, because "App designer" only have in that MATLAB version.
-
 
