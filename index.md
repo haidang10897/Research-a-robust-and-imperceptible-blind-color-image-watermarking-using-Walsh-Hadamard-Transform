@@ -11,9 +11,9 @@
 
 <a name="1"></a>
 # Project information
-Scholar: Trần Hải Đăng  		
-Class: AT12ET - AT120515  
-Instructor: Ths. Trần Thị Xuyên  
+Scholar: Tran Hai Dang    		
+Class: AT12ET - AT120515    
+Instructor: Ths. Tran Thi Xuyen  
 Academy: Academy of Cryptography Techniques  
 Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
 Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
@@ -33,7 +33,10 @@ OS: Windows 10 build 19041
 Display: Asus VA24EHE
 
 <a name="4"></a>
-# How to install
+# How to install  
+
+** Go to [Release](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases/tag/v1.0) to download**  
+
 ### For MATLAB user
 
     1. Download "WatermarkWHT_for_MATLAB_user" lastest version.
@@ -89,4 +92,5 @@ Display: Asus VA24EHE
 # Note
 - Make sure to read the guide before using.
 - If you're a developer, or just want to edit code, make sure you have MATLAB R2018 or newer, because "App designer" only have in that MATLAB version.
+
 
