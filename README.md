@@ -21,9 +21,13 @@ Reference: An effective robust and imperceptible blind color image watermarking 
 <a name="2"></a>
 # Overview
 <img src = "./Image/Home.png">  
+
 - Documentation: https://haidang10897.github.io/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/  
+
 - Download: https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases  
+
 - Source code: https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform  
+
 
 
 <a name="3"></a>
