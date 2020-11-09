@@ -22,6 +22,12 @@ Reference: An effective robust and imperceptible blind color image watermarking 
 # Overview
 <img src = "./Image/Home.png">  
 
+- Documentation: https://haidang10897.github.io/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/  
+
+- Download: https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases  
+
+- Source code: https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform  
+
 <a name="3"></a>
 # System information
 
@@ -35,7 +41,7 @@ Display: Asus VA24EHE
 <a name="4"></a>
 # How to install  
 
-** Go to [Release](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases/tag/v1.0) to download**  
+**Go to [Release](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases/tag/v1.0) to download**  
 
 ### For MATLAB user
 
