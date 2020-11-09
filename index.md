@@ -11,9 +11,9 @@
 
 <a name="1"></a>
 # Project information
-Scholar: Trần Hải Đăng  
+Scholar: Tran Hai Dang  
 Class: AT12ET - AT120515  
-Instructor: Ths. Trần Thị Xuyên  
+Instructor: Ths. Tran Thi Xuyen  
 Academy: Academy of Cryptography Techniques  
 Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
 Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
