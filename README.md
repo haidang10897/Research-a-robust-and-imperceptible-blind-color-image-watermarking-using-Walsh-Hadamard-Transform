@@ -33,7 +33,10 @@ OS: Windows 10 build 19041
 Display: Asus VA24EHE
 
 <a name="4"></a>
-# How to install
+# How to install  
+
+** Go to [Release](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/releases/tag/v1.0) to download**  
+
 ### For MATLAB user
 
     1. Download "WatermarkWHT_for_MATLAB_user" lastest version.
