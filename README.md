@@ -11,7 +11,7 @@
 
 <a name="1"></a>
 # Project information
-Scholar: Trần Hải Đăng  		
+Scholar: Trần Hải Đăng  
 Class: AT12ET - AT120515  
 Instructor: Ths. Trần Thị Xuyên  
 Academy: Academy of Cryptography Techniques  
