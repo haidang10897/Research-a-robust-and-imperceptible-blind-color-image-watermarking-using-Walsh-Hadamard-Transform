@@ -1,37 +1,92 @@
-## Welcome to GitHub Pages
+# Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform
+# Table of contents
+* [1. Project Information](#1)
+* [2. Overview](#2)
+* [3. System information](#3)
+* [4. How to use](#4)
+* [5. How to install](#5)  
+* [6. Embed Result](#6)  
+* [7. Attack Result](#7)  
+* [8. Note](#8)  
 
-You can use the [editor on GitHub](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<a name="1"></a>
+# Project information
+Scholar: Trần Hải Đăng  		
+Class: AT12ET - AT120515  
+Instructor: Ths. Trần Thị Xuyên  
+Academy: Academy of Cryptography Techniques  
+Project: Research a robust and imperceptible blind color image watermarking using Walsh Hadamard Transform  
+Reference: An effective robust and imperceptible blind color image watermarking using WHT, K. Prabha, I. Shatheesh Sam  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<a name="2"></a>
+# Overview
+<img src = "./Image/Home.png">  
 
-### Markdown
+<a name="3"></a>
+# System information
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+CPU: Intel Core I7-3770 3.4GHZ  
+RAM: 16GB  
+VGA: NVIDIA GeForce 650Ti  
+Software: Matlab R2018a  
+OS: Windows 10 build 19041
+Display: Asus VA24EHE
 
-```markdown
-Syntax highlighted code block
+<a name="4"></a>
+# How to install
+### For MATLAB user
 
-# Header 1
-## Header 2
-### Header 3
+    1. Download "WatermarkWHT_for_MATLAB_user" lastest version.
+    2. Open "MATLAB" program.
+    3. Change Workspace/Current folder to where you save the downloaded file above.
+    4. Right-click to the ~.mlappinstall file to install.
+    5. On top of the MATLAB menu, change to tab "Apps" and choose the program you've just installed.  
 
-- Bulleted
-- List
+### For non-MATLAB user
 
-1. Numbered
-2. List
+    1. Download "WatermarkWHT" lastest version.
+    2. Open the install file to install the program.
+    3. Follow the instruction in the setup file.
+    4. When done, open the program and begin to use.
 
-**Bold** and _Italic_ and `Code` text
+### For Developer
 
-[Link](url) and ![Image](src)
-```
+    1. Clone or Fork,... the repository (E.g: Click Code -> Download ZIP on above menu of this web)
+    2. Open "MATLAB" program.
+    3. Change Workspace or add to path the folder you've just downloaded.
+    4. Begin edit.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<a name="5"></a>
+# How to use
+> The program have GUI so it's very easy to use, if you still not know how to use, so go to the tab "About" in the program you've opened and read the guide. Beside, there are videos below the guide to help you (but require internet). - BacDau
 
-### Jekyll Themes
+> Tutorial videos: https://www.youtube.com/playlist?list=PL5D4ygJQLkjgtDO9FgI8tZhbU6i3DRSIl  
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/haidang10897/Research-a-robust-and-imperceptible-blind-color-image-watermarking-using-Walsh-Hadamard-Transform/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<a name="6"></a>
+# Embed Result
+| Host image | Watermark image |
+|--|--|
+| <img src = "./Test%20sample/Non-square%20Host%20Image/shima.png">   | <img src = "./Test%20sample/Watermark/Shimakaze.png"> |  
 
-### Support or Contact
+| Embedded host image | Extracted watermark image |
+|--|--|
+| <img src = "./Test%20sample/Processed%20Image/Watermarked/shima_with_shimakaze_watermarked.png"> | <img src = "./Test%20sample/Processed%20Image/extracted_watermark/Extracted_Watermark_Shima_Shimakaze.png"> |
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<a name="7"></a>
+# Attack Result
+| Attack | Extracted Watermark |
+|--|--|
+| Rotate | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/rotate.png"> |
+| Resize | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/resize.png"> |
+| Crop Vertically | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/crop.png"> |
+| Salt and Pepper | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/salt%20and%20pepper.png"> |
+| Median filter | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/medfil.png"> |
+| Brighten | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/brighten.png"> |
+| Darken | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/darken.png"> |
+| Compress | <img src = "./Test%20sample/Processed%20Image/Extracted_Attack/shima%20and%20shimakaze/compress.png"> |
+
+<a name="8"></a>
+# Note
+- Make sure to read the guide before using.
+- If you're a developer, or just want to edit code, make sure you have MATLAB R2018 or newer, because "App designer" only have in that MATLAB version.
+
