@@ -22,6 +22,9 @@ function ncResult = nc2(watermarkedImage,hostImage)
 % Doc file anh
 hostImage = imread(hostImage);
 
+if all(watermarkedImage == watermarkedImage(1,1,1))
+    ncResult = 'N/A';
+else
 % Trich xuat kenh mau.
 % Trich xuat R, G, B cua anh da thuy van
 watermarkedImageRedChannel = watermarkedImage(:,:,1); % Red channel
@@ -38,6 +41,7 @@ ncRedChannel = max(max(normxcorr2(watermarkedImageRedChannel(:,:),hostImageRedCh
 ncGreenChannel = max(max(normxcorr2(watermarkedImageGreenChannel(:,:),hostImageGreenChannel(:,:))));
 ncBlueChannel = max(max(normxcorr2(watermarkedImageBlueChannel(:,:),hostImageBlueChannel(:,:))));
 
-%Ket qua NC = AVG NC cua 3 kenh mau
+% Ket qua NC = AVG NC cua 3 kenh mau
 ncResult = (ncRedChannel + ncGreenChannel + ncBlueChannel)/3;
+end
 end

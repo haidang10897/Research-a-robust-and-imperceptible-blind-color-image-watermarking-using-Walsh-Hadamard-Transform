@@ -1,4 +1,4 @@
-function AttackedWatermarkedImage = cropAtk(WatermarkedImagePath, percent)
+function AttackedWatermarkedImage = gaussFilAtk(WatermarkedImagePath, Sigma)
 % ______             ______            
 % | ___ \            |  _  \           
 % | |_/ / __ _  ___  | | | |__ _ _   _ 
@@ -14,28 +14,14 @@ function AttackedWatermarkedImage = cropAtk(WatermarkedImagePath, percent)
 % #          Email - haidangtran97@gmail.com                        #
 % ###################################################################
 
-% Crop image verticaly
-% Note: Another way is use imcrop() function, and then reconstruct image
-% But in this function, i crop image by setting all the crop area to 0. 
-% I think this way is easier.
-
 % Input: Path of watermarked image
-%        Crop percent. E.g: 50 is crop 50% vertical
-% Output: Matrices of cropped image
+%        Sigma
+% Output: Matrices of attacked image
 
 % Doc file anh
 I = imread(WatermarkedImagePath);
 
-% Get size
-[WatermarkedImageRows WatermarkedImageColumns ColorBand] = size(I);
-
-% Get crop position
-RowCropPosition = floor((WatermarkedImageRows/100)*percent);
-
-% Crop image verticaly
-I(1:RowCropPosition, 1:WatermarkedImageColumns, :) = 0;
-
 % Output
-AttackedWatermarkedImage = I;
+AttackedWatermarkedImage = imgaussfilt(I, Sigma);
 end
 

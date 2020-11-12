@@ -1,4 +1,4 @@
-function AttackedWatermarkedImage = cropAtk(WatermarkedImagePath, percent)
+function AttackedWatermarkedImage = cropHorizontalAtk(WatermarkedImagePath, percent)
 % ______             ______            
 % | ___ \            |  _  \           
 % | |_/ / __ _  ___  | | | |__ _ _   _ 
@@ -20,7 +20,7 @@ function AttackedWatermarkedImage = cropAtk(WatermarkedImagePath, percent)
 % I think this way is easier.
 
 % Input: Path of watermarked image
-%        Crop percent. E.g: 50 is crop 50% vertical
+%        Crop percent. E.g: 50 is crop 50% horizontal
 % Output: Matrices of cropped image
 
 % Doc file anh
@@ -30,10 +30,10 @@ I = imread(WatermarkedImagePath);
 [WatermarkedImageRows WatermarkedImageColumns ColorBand] = size(I);
 
 % Get crop position
-RowCropPosition = floor((WatermarkedImageRows/100)*percent);
+ColumnCropPosition = floor((WatermarkedImageRows/100)*percent);
 
 % Crop image verticaly
-I(1:RowCropPosition, 1:WatermarkedImageColumns, :) = 0;
+I(1:WatermarkedImageRows, 1:ColumnCropPosition, :) = 0;
 
 % Output
 AttackedWatermarkedImage = I;
